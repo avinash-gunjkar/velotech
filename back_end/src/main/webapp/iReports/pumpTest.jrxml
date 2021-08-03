@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="563" leftMargin="20" rightMargin="12" topMargin="20" bottomMargin="20" uuid="9d8f139a-d88c-44d7-b11b-0b1bc775da74">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="180"/>
+	<property name="ireport.y" value="960"/>
+	<parameter name="chart" class="net.sf.jasperreports.engine.JRRenderable"/>
+	<parameter name="testMasterId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_04_TestingMaster."ID" AS tbl_04_TestingMaster_ID,
+     tbl_04_TestingMaster."RUNNINGNO" AS tbl_04_TestingMaster_RUNNINGNO,
+     tbl_04_TestingMaster."LOGNUMBER" AS tbl_04_TestingMaster_LOGNUMBER,
+     tbl_04_TestingMaster."DATE" AS tbl_04_TestingMaster_DATE,
+     tbl_04_TestingMaster."TESTBED_ID" AS tbl_04_TestingMaster_TESTBED_ID,
+     tbl_04_TestingMaster."MOTOR_ID" AS tbl_04_TestingMaster_MOTOR_ID,
+     tbl_04_TestingMaster."SUCTION_PIPE_SIZE" AS tbl_04_TestingMaster_SUCTION_PIPE_SIZE,
+     tbl_04_TestingMaster."DISCHARGE_PIPE_SIZE" AS tbl_04_TestingMaster_DISCHARGE_PIPE_SIZE,
+     tbl_04_TestingMaster."PIPESIZE_UOM" AS tbl_04_TestingMaster_PIPESIZE_UOM,
+     tbl_04_TestingMaster."FLUID_TEMP" AS tbl_04_TestingMaster_FLUID_TEMP,
+     tbl_04_TestingMaster."REMARKS" AS tbl_04_TestingMaster_REMARKS,
+     tbl_04_TestingMaster."ACCEPTED" AS tbl_04_TestingMaster_ACCEPTED,
+     tbl_04_TestingMaster."AUTHORISED" AS tbl_04_TestingMaster_AUTHORISED,
+     tbl_04_TestingMaster."HEAD_DEGREE" AS tbl_04_TestingMaster_HEAD_DEGREE,
+     tbl_04_TestingMaster."POWER_DEGREE" AS tbl_04_TestingMaster_POWER_DEGREE,
+     tbl_04_TestingMaster."EFFICIENCY_DEGREE" AS tbl_04_TestingMaster_EFFICIENCY_DEGREE,
+     tbl_04_TestingMaster."NPSH_DEGREE" AS tbl_04_TestingMaster_NPSH_DEGREE,
+     tbl_04_TestingMaster."TRIM_DIA" AS tbl_04_TestingMaster_TRIM_DIA,
+     tbl_04_TestingMaster."TEST_PROCESS" AS tbl_04_TestingMaster_TEST_PROCESS,
+     tbl_04_TestingMaster."TESTING_STD" AS tbl_04_TestingMaster_TESTING_STD,
+     tbl_04_TestingMaster."NOISE_LEVEL" AS tbl_04_TestingMaster_NOISE_LEVEL,
+     tbl_04_TestingMaster."VIBRATION" AS tbl_04_TestingMaster_VIBRATION,
+     tbl_04_TestingMaster."AMBIENT_TEMP" AS tbl_04_TestingMaster_AMBIENT_TEMP,
+     tbl_04_TestingMaster."MOTOR_SR_NO" AS tbl_04_TestingMaster_MOTOR_SR_NO,
+     tbl_04_TestingMaster."WORKORDER_NO" AS tbl_04_TestingMaster_WORKORDER_NO,
+     tbl_04_TestingMaster."WO_DATE" AS tbl_04_TestingMaster_WO_DATE,
+     tbl_04_TestingMaster."CUSTOMER_NAME" AS tbl_04_TestingMaster_CUSTOMER_NAME,
+     tbl_04_TestingMaster."PROJECT_NAME" AS tbl_04_TestingMaster_PROJECT_NAME,
+     tbl_04_TestingMaster."PO_REFERENCE" AS tbl_04_TestingMaster_PO_REFERENCE,
+     tbl_04_TestingMaster."MODEL_MASTER_ID" AS tbl_04_TestingMaster_MODEL_MASTER_ID,
+     tbl_04_TestingMaster."PUMP_SERIAL_NO" AS tbl_04_TestingMaster_PUMP_SERIAL_NO,
+     tbl_04_TestingMaster."STAGE" AS tbl_04_TestingMaster_STAGE,
+     tbl_04_TestingMaster."ROTATION" AS tbl_04_TestingMaster_ROTATION,
+     tbl_04_TestingMaster."DP_CAPACITY" AS tbl_04_TestingMaster_DP_CAPACITY,
+     tbl_04_TestingMaster."DP_HEAD" AS tbl_04_TestingMaster_DP_HEAD,
+     tbl_04_TestingMaster."DP_SPEED" AS tbl_04_TestingMaster_DP_SPEED,
+     tbl_04_TestingMaster."DP_EFFICIENCY" AS tbl_04_TestingMaster_DP_EFFICIENCY,
+     tbl_04_TestingMaster."DP_POWER" AS tbl_04_TestingMaster_DP_POWER,
+     tbl_04_TestingMaster."SEAL_TYPE" AS tbl_04_TestingMaster_SEAL_TYPE,
+     tbl_04_TestingMaster."SEALING_MATERIAL" AS tbl_04_TestingMaster_SEALING_MATERIAL,
+     tbl_04_TestingMaster."SEALING_SIZE" AS tbl_04_TestingMaster_SEALING_SIZE,
+     tbl_05_TestingData."ID" AS tbl_05_TestingData_ID,
+     tbl_05_TestingData."TESTING_MASTER_ID" AS tbl_05_TestingData_TESTING_MASTER_ID,
+     tbl_05_TestingData."PRESSURE_SUCTION" AS tbl_05_TestingData_PRESSURE_SUCTION,
+     tbl_05_TestingData."PRESSURE_DISCHARGE" AS tbl_05_TestingData_PRESSURE_DISCHARGE,
+     tbl_05_TestingData."DISTANCE_BETWN_GAUGE" AS tbl_05_TestingData_DISTANCE_BETWN_GAUGE,
+     tbl_05_TestingData."VELOCITYHEAD_SUCTION" AS tbl_05_TestingData_VELOCITYHEAD_SUCTION,
+     tbl_05_TestingData."VELOCITYHEAD_DISCHARGE" AS tbl_05_TestingData_VELOCITYHEAD_DISCHARGE,
+     tbl_05_TestingData."VELOCITYHEAD_TOTAL" AS tbl_05_TestingData_VELOCITYHEAD_TOTAL,
+     tbl_05_TestingData."TOTAL_HEAD" AS tbl_05_TestingData_TOTAL_HEAD,
+     tbl_05_TestingData."CURRENT_" AS tbl_05_TestingData_CURRENT_,
+     tbl_05_TestingData."VOLTAGE" AS tbl_05_TestingData_VOLTAGE,
+     tbl_05_TestingData."POWERFACTOR" AS tbl_05_TestingData_POWERFACTOR,
+     tbl_05_TestingData."FLOW" AS tbl_05_TestingData_FLOW,
+     tbl_05_TestingData."SPEED" AS tbl_05_TestingData_SPEED,
+     tbl_05_TestingData."FREQUENCY" AS tbl_05_TestingData_FREQUENCY,
+     tbl_05_TestingData."MOTOR_POWER" AS tbl_05_TestingData_MOTOR_POWER,
+     tbl_05_TestingData."MOTOR_EFF" AS tbl_05_TestingData_MOTOR_EFF,
+     tbl_05_TestingData."PUMP_INPUT" AS tbl_05_TestingData_PUMP_INPUT,
+     tbl_05_TestingData."HEAD_DC" AS tbl_05_TestingData_HEAD_DC,
+     tbl_05_TestingData."FLOW_DC" AS tbl_05_TestingData_FLOW_DC,
+     tbl_05_TestingData."POWER_DC" AS tbl_05_TestingData_POWER_DC,
+     tbl_05_TestingData."EFFICIENCY_DC" AS tbl_05_TestingData_EFFICIENCY_DC,
+     tbl_00_ModelMaster."PUMP_MODEL" AS tbl_00_ModelMaster_PUMP_MODEL,
+     tbl_00_ModelMaster."SUCTION" AS tbl_00_ModelMaster_SUCTION,
+     tbl_00_ModelMaster."DISCHARGE" AS tbl_00_ModelMaster_DISCHARGE,
+     tbl_00_ModelMaster."PUMP_TYPE" AS tbl_00_ModelMaster_PUMP_TYPE,
+     tbl_00_ModelMaster."STAGE_TYPE" AS tbl_00_ModelMaster_STAGE_TYPE,
+     tbl_00_ModelMaster."SERIES" AS tbl_00_ModelMaster_SERIES,
+     tbl_00_MotorMaster."MOTOR_NO" AS tbl_00_MotorMaster_MOTOR_NO,
+     tbl_00_MotorMaster."MAKE" AS tbl_00_MotorMaster_MAKE,
+     tbl_00_MotorMaster."PHASE" AS tbl_00_MotorMaster_PHASE,
+     tbl_00_MotorMaster."POWER" AS tbl_00_MotorMaster_POWER,
+     tbl_00_MotorMaster."SPEED" AS tbl_00_MotorMaster_SPEED,
+     tbl_00_MotorMaster."FRAME" AS tbl_00_MotorMaster_FRAME,
+     tbl_00_MotorMaster."SPECIFICATION" AS tbl_00_MotorMaster_SPECIFICATION,
+     tbl_00_MotorMaster."CURRENT_" AS tbl_00_MotorMaster_CURRENT_,
+     tbl_00_MotorMaster."FREQUENCY" AS tbl_00_MotorMaster_FREQUENCY,
+     tbl_00_MotorMaster."POWER_HP" AS tbl_00_MotorMaster_POWER_HP,
+     tbl_04_TestingMaster."TEST_NO" AS tbl_04_TestingMaster_TEST_NO,
+     tbl_04_TestingMaster."TESTED_BY" AS tbl_04_TestingMaster_TESTED_BY,
+     tbl_04_TestingMaster."WITNESSED_BY" AS tbl_04_TestingMaster_WITNESSED_BY
+FROM
+     "dbo"."tbl_04_TestingMaster" tbl_04_TestingMaster INNER JOIN "dbo"."tbl_05_TestingData" tbl_05_TestingData ON tbl_04_TestingMaster."ID" = tbl_05_TestingData."TESTING_MASTER_ID"
+     INNER JOIN "dbo"."tbl_00_MotorMaster" tbl_00_MotorMaster ON tbl_04_TestingMaster."MOTOR_ID" = tbl_00_MotorMaster."ID"
+     INNER JOIN "dbo"."tbl_00_ModelMaster" tbl_00_ModelMaster ON tbl_04_TestingMaster."MODEL_MASTER_ID" = tbl_00_ModelMaster."ID"
+WHERE
+     tbl_04_TestingMaster."ID" = $P{testMasterId}]]>
+	</queryString>
+	<field name="tbl_04_TestingMaster_ID" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_RUNNINGNO" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_LOGNUMBER" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_DATE" class="java.sql.Date"/>
+	<field name="tbl_04_TestingMaster_TESTBED_ID" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_MOTOR_ID" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_SUCTION_PIPE_SIZE" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_DISCHARGE_PIPE_SIZE" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_PIPESIZE_UOM" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_FLUID_TEMP" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_REMARKS" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_ACCEPTED" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_AUTHORISED" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_HEAD_DEGREE" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_POWER_DEGREE" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_EFFICIENCY_DEGREE" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_NPSH_DEGREE" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_TRIM_DIA" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_TEST_PROCESS" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_TESTING_STD" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_NOISE_LEVEL" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_VIBRATION" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_AMBIENT_TEMP" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_MOTOR_SR_NO" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_WORKORDER_NO" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_WO_DATE" class="java.sql.Date"/>
+	<field name="tbl_04_TestingMaster_CUSTOMER_NAME" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_PROJECT_NAME" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_PO_REFERENCE" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_MODEL_MASTER_ID" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_PUMP_SERIAL_NO" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_STAGE" class="java.lang.Integer"/>
+	<field name="tbl_04_TestingMaster_ROTATION" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_DP_CAPACITY" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_DP_HEAD" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_DP_SPEED" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_DP_EFFICIENCY" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_DP_POWER" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_SEAL_TYPE" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_SEALING_MATERIAL" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_SEALING_SIZE" class="java.lang.String"/>
+	<field name="tbl_05_TestingData_ID" class="java.lang.Integer"/>
+	<field name="tbl_05_TestingData_TESTING_MASTER_ID" class="java.lang.Integer"/>
+	<field name="tbl_05_TestingData_PRESSURE_SUCTION" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_PRESSURE_DISCHARGE" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_DISTANCE_BETWN_GAUGE" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_VELOCITYHEAD_SUCTION" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_VELOCITYHEAD_DISCHARGE" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_VELOCITYHEAD_TOTAL" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_TOTAL_HEAD" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_CURRENT_" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_VOLTAGE" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_POWERFACTOR" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_FLOW" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_SPEED" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_FREQUENCY" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_MOTOR_POWER" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_MOTOR_EFF" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_PUMP_INPUT" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_HEAD_DC" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_FLOW_DC" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_POWER_DC" class="java.lang.Double"/>
+	<field name="tbl_05_TestingData_EFFICIENCY_DC" class="java.lang.Double"/>
+	<field name="tbl_00_ModelMaster_PUMP_MODEL" class="java.lang.String"/>
+	<field name="tbl_00_ModelMaster_SUCTION" class="java.lang.Double"/>
+	<field name="tbl_00_ModelMaster_DISCHARGE" class="java.lang.Double"/>
+	<field name="tbl_00_ModelMaster_PUMP_TYPE" class="java.lang.String"/>
+	<field name="tbl_00_ModelMaster_STAGE_TYPE" class="java.lang.String"/>
+	<field name="tbl_00_ModelMaster_SERIES" class="java.lang.String"/>
+	<field name="tbl_00_MotorMaster_MOTOR_NO" class="java.lang.String"/>
+	<field name="tbl_00_MotorMaster_MAKE" class="java.lang.String"/>
+	<field name="tbl_00_MotorMaster_PHASE" class="java.lang.Integer"/>
+	<field name="tbl_00_MotorMaster_POWER" class="java.lang.Double"/>
+	<field name="tbl_00_MotorMaster_SPEED" class="java.lang.Double"/>
+	<field name="tbl_00_MotorMaster_FRAME" class="java.lang.String"/>
+	<field name="tbl_00_MotorMaster_SPECIFICATION" class="java.lang.String"/>
+	<field name="tbl_00_MotorMaster_CURRENT_" class="java.lang.Double"/>
+	<field name="tbl_00_MotorMaster_FREQUENCY" class="java.lang.Double"/>
+	<field name="tbl_00_MotorMaster_POWER_HP" class="java.lang.Double"/>
+	<field name="tbl_04_TestingMaster_TEST_NO" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_TESTED_BY" class="java.lang.String"/>
+	<field name="tbl_04_TestingMaster_WITNESSED_BY" class="java.lang.String"/>
+	<sortField name="tbl_05_TestingData_FLOW"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="563" height="802" uuid="bc20ab98-d7be-400b-85fd-1dc0f2beac5d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="565" y="624" width="8" height="178" uuid="c7c7874d-38cd-4adc-9abf-f43fce6e833e"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="Verdana" size="6"/>
+				</textElement>
+				<text><![CDATA[Powered By: Velotech Solutions]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="614" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="2" y="2" width="87" height="62" forecolor="#000000" uuid="09cd4c0a-90c7-4f22-ae7e-8307b3b00bee"/>
+				<imageExpression><![CDATA["Logo_SE.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="104" y="2" width="356" height="18" forecolor="#2A1773" uuid="8948325b-7b42-4d34-9f2b-fab7f958e334"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SHREE ENTERPRISES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="19" width="356" height="45" uuid="b07a0a51-6885-41e5-99da-959a28c0ded6"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Katraj-Hadapsar bypass Road,Opp. Balaji Hotel, Danny Mehata Nagar, Indl. Area, Pisoli, Pune - 411048, Maharashtra, India
+Phone: +91-8999370316, +91-7620819908, Email: info@shreepump.com / shreepune48@gmail.com, www.shreepump.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="66" width="563" height="16" forecolor="#000000" backcolor="#CCCCCC" uuid="ffa131cb-5652-4e2b-b91f-085be3473230"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[PUMP TEST REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="105" width="263" height="13" uuid="93d6b51f-d4a2-428f-b2b5-be8890acc552"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PUMP DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="105" width="150" height="13" uuid="60b3be53-c86f-40e8-ac98-19d97f28a6f1"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Test Motor Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="105" width="150" height="13" uuid="35737d50-b788-455c-be36-1c40d2c79770"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Duty Condition]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="119" width="62" height="12" uuid="845166f1-ccf2-4d17-8214-4a57955f4bf4"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[PUMP Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="131" width="62" height="12" uuid="d861020c-a64a-4c79-ab72-4c3f7bf95a3e"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[PUMP SI. NO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="143" width="62" height="12" uuid="b5c1554e-15bf-47c3-ac0e-a8fdfc1cf07e"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Impeller Dia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="155" width="62" height="12" uuid="312e1e4b-a2f7-4669-825e-a7197f88abaf"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="167" width="62" height="12" uuid="bc261994-ba2c-4fe9-898a-32d4fb781353"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Client Order ref]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="167" width="80" height="12" uuid="a95f4e05-5118-4710-a33a-388a24d25873"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Current(Amps)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="143" width="80" height="12" uuid="1b3591ad-e188-4d46-bff9-b7d0db0832d2"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Frame/Classof Prot.Ins]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="155" width="80" height="12" uuid="a815ccf1-9a90-46df-8d0b-9545d412e0c4"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Speed(rpm)/Freq(hz)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="119" width="80" height="12" uuid="83715cb8-0148-44c9-a36f-22e3a631c64b"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Make]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="131" width="80" height="12" uuid="23417f8e-60ff-473f-978e-73b96d72e29e"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Rating (HP) / (kW)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="119" width="80" height="12" uuid="4d840393-1c1e-41e9-a0df-19ff02d05e78"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Flow rate (m3/hr)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="155" width="80" height="12" uuid="a74dfb94-d3e4-49d8-9919-dcb624ecb3d3"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Power[Water](KW)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="167" width="80" height="12" uuid="43db1197-9f24-453b-a8dd-5e549d89b28f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Pump Rated Speed (rpm)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="143" width="80" height="12" uuid="02bf6195-fc88-4700-bb99-128fd01332f2"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Efficiency(%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="131" width="80" height="12" uuid="e683b29b-d730-4643-97e2-bb2a82500d97"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Head(m)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="155" width="201" height="12" uuid="f6605ab4-e1ec-4484-95fc-21b7e815f6a2"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_CUSTOMER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="143" width="201" height="12" uuid="8fe19153-b9ae-45aa-be80-3dcff6736ca7"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_TRIM_DIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="167" width="201" height="12" uuid="46266b40-b254-47c7-8c12-15aecfcd8eb0"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_PO_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="131" width="201" height="12" uuid="c000340b-099c-4141-a252-10eb1d880a82"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_PUMP_SERIAL_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="119" width="201" height="12" uuid="5a600600-1d67-4d2b-900d-d2f2ec418abd"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_00_ModelMaster_PUMP_MODEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="143" width="70" height="12" uuid="147c8eb1-362e-43a7-b1c7-8168c8b22980"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_00_MotorMaster_FRAME}+"/"+$F{tbl_00_MotorMaster_SPECIFICATION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="155" width="70" height="12" uuid="a17e8d2c-1d9c-418f-a55d-e329c7759e83"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_00_MotorMaster_SPEED}+"/"+$F{tbl_00_MotorMaster_FREQUENCY}+"Hz"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="167" width="70" height="12" uuid="2879db37-db7d-40ef-81c9-9605516a7fb5"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_00_MotorMaster_CURRENT_}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="119" width="70" height="12" uuid="d43d35f9-08c3-4c0e-aeca-4cd9a4208a2d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_00_MotorMaster_MAKE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="131" width="70" height="12" uuid="f64d4cef-a0f6-4b5b-a1b6-f564fe289df4"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_00_MotorMaster_POWER_HP}+" / "+$F{tbl_00_MotorMaster_POWER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="131" width="70" height="12" uuid="11c672a7-4556-499b-be34-89735b5d62b2"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_DP_HEAD}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0 %">
+				<reportElement x="493" y="143" width="70" height="12" uuid="0b70051e-6343-424d-b6c8-24bdb2e6b04f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_DP_EFFICIENCY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="119" width="70" height="12" uuid="59ae3143-0419-4605-8457-e2eeffc7a42e"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_DP_CAPACITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="167" width="70" height="12" uuid="8f899930-d8d9-446b-a035-4d21bcc680c4"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_DP_SPEED}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="155" width="70" height="12" uuid="78601247-73a5-4258-8305-ef4cc3d10fdd"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_DP_POWER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="85" width="62" height="12" uuid="205c50c2-c199-4950-b28e-897277efc108"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[W/O Ref]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="85" width="201" height="12" uuid="25888b00-0e4b-4e7c-8119-2dd977aa154c"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_WORKORDER_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="85" width="70" height="12" uuid="927b8820-15c0-4c6f-92a3-15afb4028135"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="263" y="85" width="80" height="12" uuid="834f65da-dfa6-4744-94d2-b687d4f96eb5"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Test No]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy">
+				<reportElement x="493" y="85" width="70" height="12" uuid="0b11ed62-4b84-4f8e-96de-96cab7eb447f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="85" width="80" height="12" uuid="9e6e73a7-88f2-4a35-8286-cf1736e98a9d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<image scaleImage="Clip" hAlign="Center">
+				<reportElement x="3" y="231" width="559" height="380" uuid="40e997cb-83a7-48aa-863f-1178ebaba1ed"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{chart}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="209" width="118" height="12" uuid="6145a9d4-a4e1-4df6-9bc4-489d4ef8ba93"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_SEALING_SIZE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="209" width="65" height="12" uuid="11777ffc-3691-4c12-9491-eb0c17896745"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Sealing Size]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="460" y="209" width="103" height="12" uuid="d31900a0-1675-4d96-89e1-85c7b99b3d19"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_MOTOR_SR_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="185" width="65" height="12" uuid="b187a506-904c-4267-a304-2bc18348847d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Sealing Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="209" width="80" height="12" uuid="bca61d63-9945-4efa-8c60-1e19b3b0fa81"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Noise Level (db)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="263" y="209" width="117" height="12" uuid="e1be8201-b6db-453d-81af-25bda41e327c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_NOISE_LEVEL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="460" y="185" width="103" height="12" uuid="529fae27-7c45-4f0b-901b-738c6b4905d6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_VIBRATION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="183" y="185" width="80" height="12" uuid="effc42c5-4a3e-406a-b922-abfa581101ae"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[End Connection Size]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="209" width="80" height="12" uuid="973d3bdf-2f71-4040-a685-6533e5f866b6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Motor Sr. No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="197" width="80" height="12" uuid="49e5109c-4d85-4a92-bb91-78e5cf623584"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Ambient Temp (deg)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="460" y="197" width="103" height="12" uuid="559488a6-1124-469c-903b-1ccab817e183"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_AMBIENT_TEMP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="185" width="118" height="12" uuid="42852cca-2b1b-4f57-beee-891ae34b0489"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_SEAL_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="263" y="185" width="117" height="12" uuid="450a3ce5-1eb4-4c59-8571-71a51135846b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_SUCTION_PIPE_SIZE}+" x "+$F{tbl_04_TestingMaster_DISCHARGE_PIPE_SIZE}+" mm"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="197" width="118" height="12" uuid="d467a455-c92d-4f35-855b-a27252a04f7c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_SEALING_MATERIAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="185" width="80" height="12" uuid="21fbb247-50ea-4ce7-b090-4ab6af4e9cdc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Vibration (microns)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="263" y="197" width="117" height="12" uuid="39a181db-4c1d-4399-a96d-afd513ca7a09"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_DISTANCE_BETWN_GAUGE}+" mtr"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="183" y="197" width="80" height="12" uuid="d88d02ab-38da-4c8a-9ee3-f1744ede7556"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Gauge Level Difference]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="197" width="65" height="12" uuid="e2336bb0-8f41-47e7-bb63-66b60439167c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Sealing Material]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="20" height="32" uuid="2b21558a-d8aa-4d5b-ba51-dc73e8d5e2b2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[s/no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="35" height="32" uuid="7a835667-ca54-4cea-9daf-c1ba9a9ab6a1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Flow
+rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="0" width="34" height="32" uuid="691afe37-0693-4c39-9fbc-a3bae5286afc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Suction
+Gauge
+Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="0" width="36" height="32" uuid="b40cbb94-3fc3-4ebb-b8f3-b200cfe9558f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Delivery
+Gauge
+Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="0" width="30" height="32" uuid="aca31578-f43b-4691-b976-00c92e3e2548"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Velocity
+Head
+Corr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="29" height="32" uuid="d2d2f8b5-3d5f-4a4d-8e62-0b2fcbc62b66"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total
+Head]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="31" height="32" uuid="d367e08e-3de7-47af-9b1c-78b1d540d07d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Voltage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="29" height="32" uuid="778d96da-b260-4894-aa7e-472b104ea1e9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Motor
+Out put]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="30" height="32" uuid="19b3ed9b-d26b-432e-8b6c-002ccacf7fa8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Current]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="32" height="32" uuid="6fee8040-c1bb-4580-969a-d91fa24f95cb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Speed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="0" width="30" height="32" uuid="777148f4-a571-4c6e-9623-9455f46a64ba"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Motor
+Input]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="372" y="0" width="114" height="11" uuid="bf415bcb-0111-4a2d-b871-1f3d2704bb9c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Perf. converted at:"+$F{tbl_04_TestingMaster_DP_SPEED}+"RPM"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="486" y="0" width="76" height="32" uuid="f8bc9066-eff6-4a7f-b98a-d8d4e4c85ae0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pump
+Efficiency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="11" width="38" height="21" uuid="d841ce13-9aad-4c14-b2db-0f91ea519061"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Flow]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="11" width="38" height="21" uuid="8c177620-04d3-4ec0-8de7-9bba81778975"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Head]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="11" width="38" height="21" uuid="bb493683-5a18-4afa-bab3-5b9874a2e6f3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pump
+Input]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="32" width="35" height="12" uuid="c9b25001-6ad5-48a8-b139-25d06302ad1a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[m3/hr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="32" width="29" height="12" uuid="0f8e96fe-7ad6-4e66-9755-af9a70ffcc63"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[kw]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="32" width="32" height="12" uuid="9547dd26-c82e-4613-9bae-3d6cf922a941"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[rpm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="32" width="30" height="12" uuid="25c89fdf-c1c0-49ce-80d3-31eb5a91aa38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="32" width="38" height="12" uuid="8fd82513-a3c9-47a3-9727-a47d78fc2957"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[m3/hr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="32" width="30" height="12" uuid="d12be2d6-8404-4b3d-b6f4-b7e12168d368"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[amps]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="32" width="31" height="12" uuid="7ea9e652-8160-4d7c-8637-538a94f4b30f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[v]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="32" width="76" height="12" uuid="2bfcebc0-8cc9-4cb6-9001-c791f7c676a2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="32" width="34" height="12" uuid="f03bd12e-929a-4202-98ac-52cde69f1058"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="32" width="30" height="12" uuid="3c9e62e0-56cf-4fa9-bc0e-32051d35321c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[kw]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="32" width="38" height="12" uuid="1d473e41-3a29-4be2-8b6b-aa7d9a43fb35"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[kw]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="32" width="29" height="12" uuid="74076a88-3109-4625-8ab5-bcc542676881"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[mwc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="32" width="38" height="12" uuid="1fa9818c-b731-4ead-aaaa-40203b99f40b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[mtrs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="32" width="36" height="12" uuid="87107610-cc64-4335-8a43-983acbf96b05"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="20" height="12" uuid="61f0f18d-dfc8-460b-8722-1cb3ebe85983"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="32" width="36" height="12" uuid="24dc355a-5cf9-4618-a33f-d48593b3778a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="36" height="32" uuid="031b3768-fa21-4631-9cc4-c16edea36a64"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Motor
+Eff]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField pattern="###0.00">
+				<reportElement x="20" y="0" width="35" height="12" uuid="a33e87d9-6630-419f-b80c-d363245f25c5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_FLOW}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="55" y="0" width="34" height="12" uuid="e530c7eb-9d5f-4cd3-a4f5-6e7acfb9afbe"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_PRESSURE_SUCTION}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="89" y="0" width="36" height="12" uuid="ba369c30-7a06-4291-b94c-36a269cbab83"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_PRESSURE_DISCHARGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="125" y="0" width="30" height="12" uuid="7ab618af-5ee7-4f8e-b384-813317cb13ec"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_VELOCITYHEAD_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="155" y="0" width="29" height="12" uuid="821fa201-30a5-49c5-b24d-e7f9d088999b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_TOTAL_HEAD}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.0">
+				<reportElement x="184" y="0" width="31" height="12" uuid="6ca844b5-4693-4075-b830-81f0858411f4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_VOLTAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="215" y="0" width="30" height="12" uuid="82a7077b-0598-4599-9330-21e5f2b3fbdc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_CURRENT_}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="245" y="0" width="30" height="12" uuid="1f155e56-e623-4f15-8f94-8315bc6faeab"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_MOTOR_POWER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="311" y="0" width="29" height="12" uuid="fab26e14-9738-4737-8843-6f7217c74552"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_PUMP_INPUT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="340" y="0" width="32" height="12" uuid="a3b8fbd4-a776-4eee-a95f-c25d2aac436e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_SPEED}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="372" y="0" width="38" height="12" uuid="89f0501d-8477-4efa-87d5-0d90b795a1e5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_FLOW_DC}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="410" y="0" width="38" height="12" uuid="db08b274-ed7e-498b-ab80-c8a642e1b288"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_HEAD_DC}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="448" y="0" width="38" height="12" uuid="7a2e0bb7-553c-4b78-a07c-67d99b9c18ae"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_POWER_DC}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 %">
+				<reportElement x="486" y="0" width="76" height="12" uuid="ba8767b5-ab43-4e6c-a9ee-9c35ea827728"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_EFFICIENCY_DC}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="0" y="0" width="20" height="12" uuid="572178e6-f640-46ad-b998-5b876ffd2ac2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0 %">
+				<reportElement x="275" y="0" width="36" height="12" uuid="08c5f81f-45a3-4752-b6ba-65c217650f13"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_05_TestingData_MOTOR_EFF}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="48">
+			<staticText>
+				<reportElement x="3" y="22" width="57" height="12" uuid="9918c823-dc0f-4c18-9713-98767588d7b3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Tested By:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="22" width="57" height="12" uuid="ca356da7-3360-4afe-983d-c6384483ffe0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Witnessed By:-]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="60" y="22" width="100" height="12" uuid="3935145c-6e83-4f11-81e1-604d5b0ebc8e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_TESTED_BY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="316" y="22" width="100" height="12" uuid="b03a14f5-195b-4a15-a7d9-62a57bc7c45e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_04_TestingMaster_WITNESSED_BY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="34" width="343" height="12" uuid="2a42d576-4e70-46ab-8f71-904a742d9b65"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Performance Test based on water @ Specific gravity 1.0 with Ambient Temperature.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="34" width="161" height="12" uuid="03a47455-c207-4685-9311-8e21e8fae83e">
+					<printWhenExpression><![CDATA[$F{tbl_04_TestingMaster_TESTING_STD}!=null && !$F{tbl_04_TestingMaster_TESTING_STD}.equals( "" ) ]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+					<paragraph rightIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Testing Std As Per:- "+$F{tbl_04_TestingMaster_TESTING_STD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
